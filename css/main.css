@@ -528,6 +528,11 @@ Recipes
     grid-template-columns: 200px 1fr;
   }
 
+  .recipes-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
   .recipe p{
     font-size: 0.85rem;
   }
@@ -537,6 +542,7 @@ Recipes
   }
 
   .tags-list{
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
@@ -567,11 +573,63 @@ Error
 
 /* 
 ============
-
+About
 ===========
 */
+
+.about-page h2{
+  text-transform: none;
+  font-size: bold;
+}
+
+.about-page{
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+}
+
+.about-img {
+  border-radius: var(--borderRadius);
+  height: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .about-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+
+  .about-img{
+    height: 100%;
+  }
+}
+
+.featured-title {
+  text-align: center;
+}
+
 /* 
 ============
-
+Contact Page
 ===========
 */
+
+.contact-form {
+  width: 100%;
+  margin: 0;
+}
+
+.contact-container {
+  display: grid;
+  gap: 2rem 3rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 992px){
+  .contact-container{
+    grid-template-columns: 1fr 450px;
+    align-items: center;
+
+  }
+}
